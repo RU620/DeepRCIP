@@ -38,15 +38,3 @@ num_epoch: 100              # (for train)
 num_epoch_cv: 100           # (for cross-validation)
 cv_fold: 5                  # (for cross-validation)
 trained_weight_path: # None # (for test & permutation importance)
-
-### Mode 
-# --- Creating folders for result saving
-init: True
-# --- Cross validation
-cv: False
-# --- Train
-train: False
-# --- Test
-test: False
-# --- Permutation importance
-pi: False
