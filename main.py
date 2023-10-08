@@ -1,9 +1,14 @@
 if __name__=='__main__':
 
     import yaml
+    import argparse
     from src.RCIP import *
 
     with open('config_main.yaml','r') as f: config = yaml.safe_load(f)
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--mode', type=str, choices=['init','cv','train','test','pi'])
+    args = parser.parse_args()
 
     # fix random seed
     SEED = 1234
@@ -12,7 +17,7 @@ if __name__=='__main__':
     model_path = config['model_path'] + config['folder_name']
 
     # Creating folders for result saving
-    if config['init']: make_folders(model_path)
+    if args.mode=='init': make_folders(model_path)
 
     else: 
         # load dataset
@@ -31,11 +36,11 @@ if __name__=='__main__':
         # load dataset
         rcip.load_dataset(dataset, testset, method=config['split_type'], test_size=config['test_size'], column=config['test_column'], order_list=config['test_order'])
 
-        if config['cv']:
+        if args.mode=='cv':
             # cross-validation
             rcip.cross_validation(params_dict=config['params_dict'], cv_fold=config['cv_fold'])
 
-        if config['train']:
+        if args.mode=='train':
             # set parameters
             rcip.set_parameters(config['dropout_rate'], config['l1_alpha'], config['kernel_size'], config['num_kernel'])
             # train
@@ -43,13 +48,13 @@ if __name__=='__main__':
             # draw learning-curve
             draw_learning_curve(model_path)
 
-        if config['test']:
+        if args.mode=='test':
             # set parameters
             rcip.set_parameters(config['dropout_rate'], config['l1_alpha'], config['kernel_size'], config['num_kernel'])
             # test
             rcip.test()
 
-        if config['pi']:
+        if args.mode=='pi':
             # set parameters
             rcip.set_parameters(config['dropout_rate'], config['l1_alpha'], config['kernel_size'], config['num_kernel'])
             # permutation importance
