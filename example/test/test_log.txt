@@ -1,0 +1,20 @@
+2023-10-05 16:30:44.554562 : model test performed.
+
+2023-10-05 16:30:45.230309 : model test ended.
+
+=== Test Report ===
+  This test processed with parameters: [dropout_rate: 0.4][l1_alpha: 0.0001][kernel_size: (4, 9)][num_kernel: 8]
+  * Confusion Matrix
+                    | Pred Positive | Pred Negative |
+    | True Positive |             0 |            19 |
+    | True Negative |             0 |            81 |
+
+  * Model Performance
+   | Accuracy : 0.8100
+   | Recall   : 0.0000
+   | Precision: nan
+   | F1-score : nan
+   | AUROC    : 0.7791
+   | AUPRC    : 0.3870
+   | MCC      : nan
+  * Model test performances are saved at [/home/slab/rizumu_ueda/RCIPred_for_journal/Model/test/test_result.txt]

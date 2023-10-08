@@ -1,0 +1,18 @@
+2023-10-05 16:30:27.868223 : model train started.
+
+   ...processing...   
+
+2023-10-05 16:30:40.905911 : model train ended.
+
+=== Train Report ===
+  This train processed with parameters: [dropout_rate: 0.4][l1_alpha: 0.0001][kernel_size: (4, 9)][num_kernel: 8]
+   | Loss     : 0.451868+/-0.062158
+   | Accuracy : 0.810268+/-0.044138
+   | Recall   : 0.000000+/-0.000000
+   | Precision: 0.000000+/-0.000000
+   | F1-score : 0.000000+/-0.000000
+   | AUROC    : 0.517563+/-0.026564
+   | AUPRC    : 0.500689+/-0.202105
+  * Model performances are saved at [/home/slab/rizumu_ueda/RCIPred_for_journal/Model/train/train_result.txt]
+  * Trained Model parameters are saved at [/home/slab/rizumu_ueda/RCIPred_for_journal/Model/train/model_params.pth]
+  Totally [0.0:0.0:13.037770748138428] has passed on this process.

@@ -1,0 +1,10 @@
+### 
+# --- Canonical SMILES and molecular name
+smiles: CC1=CC(=C(C=C1Br)NC(=O)NC2=NC=C(N=C2)C)OCC3CNCCO3
+name: Rabusertib
+# --- Threshold for visualizing important substructure
+threshold: 0.003
+# --- Your model directory and file name for saving picture
+model_path: your/path/to/RCIPred/ 
+folder_name: Model/
+save_filename: Rabusertib_highlighted

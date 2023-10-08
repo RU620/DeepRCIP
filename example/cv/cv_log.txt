@@ -1,0 +1,31 @@
+2023-10-05 16:29:19.272924 : cross validation started.
+
+   ...processing...   
+
+2023-10-05 16:30:27.774863 : cross validation ended.
+
+=== Cross Validation Report ===
+  This cross validation processed with parameters range: 
+    dropout_rate: 0.5
+    l1_alpha: 0.0001
+    kernel_size: (4, 9)
+    num_kernel: 8
+
+  * According to 2-fold cross validation, the best parameters are: 
+    dropout_rate: 0.4
+    l1_alpha: 0.0001
+    kernel_size: 9
+    num_kernel: 8
+
+  * With these parameters, model achieved performance below:
+   | Loss     : 0.340042+/-0.013362
+   | Accuracy : 0.810268+/-0.004464
+   | Recall   : 0.000000+/-0.000000
+   | Precision: 0.000000+/-0.000000
+   | F1-score : 0.000000+/-0.000000
+   | AUROC    : 0.500000+/-0.000000
+   | AUPRC    : 0.594866+/-0.002232
+
+  * Model train performances are saved at [/home/slab/rizumu_ueda/RCIPred_for_journal/Model/cv/cv_train_result.txt]
+  * Model validation performances are saved at [/home/slab/rizumu_ueda/RCIPred_for_journal/Model/cv/cv_valid_result.txt]
+  Totally [0.0:1.0:8.501975536346436] has passed on this process.
