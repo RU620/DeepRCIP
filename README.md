@@ -17,24 +17,24 @@ All data is in the 'input' folder. 'DataSetA.csv' consists of a comprehensive se
 ## Program usage
 Please execute the following Python files for model training and evaluation. The necessary functions for these executions are stored in the 'src' folder.
 
-### 1. 'main.py' performs all the steps for model performance. You can run it by specifying the usage with the 'mode' argument as follows. Additionally, all parameters related to each step are specified in 'config_main.yaml'.
+ 1. 'main.py' performs all the steps for model performance. You can run it by specifying the usage with the 'mode' argument as follows. Additionally, all parameters related to each step are specified in 'config_main.yaml'.
 
-'''
+```
 $ cd path/to/your/DeepRCIP
 $ python main.py --mode init # 
 $ python main.py --mode cv #
 $ python main.py --mode train #
 $ python main.py --mode test #
 $ python main.py --mode pi #
-'''
+```
 
-### 2. 'visualize.py' draws compound structures highlighted based on the permutation importance of ECFP obtained. All parameters required for execution are specified in 'config_visualize.yaml'.
+2. 'visualize.py' draws compound structures highlighted based on the permutation importance of ECFP obtained. All parameters required for execution are specified in 'config_visualize.yaml'.
 
-'''
+```
 $ cd path/to/your/DeepRCIP
 $ python visualize.py
-'''
+```
 
-### 3. 'main.ipynb' executes the above code in notebook format. It allows for more flexibility in making changes, and for visualizing compound structures directly.
+3. 'main.ipynb' executes the above code in notebook format. It allows for more flexibility in making changes, and for visualizing compound structures directly.
 
 The results generated from this series of operations will be saved in the 'example' folder.
