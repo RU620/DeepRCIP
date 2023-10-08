@@ -8,7 +8,7 @@ use_dataset: DataSetA
 use_testset: # None
 # --- How to split dataset
 split_type: random
-test_rate: 0.1
+test_size: 0.1
 test_column: # None
 test_order: # None
 
